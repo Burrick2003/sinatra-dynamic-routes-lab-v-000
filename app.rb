@@ -12,13 +12,13 @@ class App < Sinatra::Base
   end
 
   get '/say/:number/:phrase' do
-      temp = params[:phrase].to_i
+      temp = params[:phrase]
       counter = 1
         while counter < params[:number].to_i
           temp = temp + params[:phrase].to_i
           counter += 1
         end
-      temp.to_s
+      temp
   end
 
   get '/say/:word1/:word2/:word3/:word4/:word5' do
