@@ -11,16 +11,17 @@ class App < Sinatra::Base
       "#{@answer.to_s}"
   end
 
-  get '/say/:number/:phrase'
+  get '/say/:number/:phrase' do
       temp = params[:number].to_i
         temp.times do
         end
   end
 
-  get '/say/:word1/:word2/:word3/:word4/:word5'
+  get '/say/:word1/:word2/:word3/:word4/:word5' do
       "#{params[:word1]} #{params[:word2]} #{params[:word3]} #{params[:word4]} #{params[:word5]}"
   end
-  get '/:operation/:number1/:number2'
+
+  get '/:operation/:number1/:number2' do
       if params[:operation] == "add"
         @answer = params[:number1].to_i + params[:number2].to_i
         "#{@answer.to_s}"
