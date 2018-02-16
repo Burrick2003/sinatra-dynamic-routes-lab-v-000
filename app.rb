@@ -13,7 +13,8 @@ class App < Sinatra::Base
 
   get '/say/:number/:phrase'
       temp = params[:number].to_i
-      temp.times do
+        temp.times do
+        end
   end
 
   get '/say/:word1/:word2/:word3/:word4/:word5'
