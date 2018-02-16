@@ -15,7 +15,7 @@ class App < Sinatra::Base
       temp = params[:number].to_i
       counter = 1
         while counter < params[:number].to_i
-          temp = temp + params[:number].to_i
+          temp = temp + params[:phrase].to_i
           counter += 1
         end
       temp.to_s
